@@ -2,20 +2,25 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
+import time
 
 df = pd.read_csv('nyt_article_list.csv')
 
-url = df.article_urls[0]
+urls = df.article_urls
 
-r = requests.get(url)
+for url in urls:
+    title = url.split('/')[-1].split('.')[0]
+    print("Article: {}".format(title))
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html5lib")
+    paragraphs = soup.findAll("p", {"class":"css-1tyen8a e2kc3sl0"})
 
-soup = BeautifulSoup(r.text, "html5lib")
+    text = ''
 
-paragraphs = soup.findAll("p", {"class":"css-1tyen8a e2kc3sl0"})
+    for p in paragraphs:
+        text += p.get_text()
 
-text = ''
+    with open('articles/' + title + '.txt', 'w') as f:
+        f.write(text)
 
-for p in paragraphs:
-    text += p.get_text()
-
-print(text)
+    time.sleep(2 + np.random.rand())
