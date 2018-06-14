@@ -6,7 +6,7 @@ import pandas as pd
 
 base_url = 'https://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/section/sports/basketball?q=&sort=newest&page={}&dom=www.nytimes.com&dedupe_hl=y'
 
-urls = [base_url.format(i) for i in range(30)]
+urls = [base_url.format(i) for i in range(32)]
 
 published_date = []
 article_urls = []

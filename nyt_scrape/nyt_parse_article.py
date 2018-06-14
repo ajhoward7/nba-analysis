@@ -7,20 +7,28 @@ import time
 df = pd.read_csv('nyt_article_list.csv')
 
 urls = df.article_urls
+i=0
 
 for url in urls:
+    i+=1
     title = url.split('/')[-1].split('.')[0]
     print("Article: {}".format(title))
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, "html5lib")
-    paragraphs = soup.findAll("p", {"class":"css-1tyen8a e2kc3sl0"})
+    try:
+        r = requests.get(url)
+        soup = BeautifulSoup(r.text, "html5lib")
+        paragraphs = soup.findAll("p", {"class":"css-1i0edl6 e2kc3sl0"})
 
-    text = ''
+        text = []
 
-    for p in paragraphs:
-        text += p.get_text()
+        for p in paragraphs:
+            text.append(p.get_text())
 
-    with open('articles/' + title + '.txt', 'w') as f:
-        f.write(text)
+
+        with open('articles/{}_{}.txt'.format(title,i), 'w') as f:
+            text = '\n'.join(text)
+            f.write(text)
+
+    except:
+        print("Unable to fetch: {}".format(url))
 
     time.sleep(2 + np.random.rand())
