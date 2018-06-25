@@ -11,7 +11,7 @@ i=0
 
 for url in urls:
     i+=1
-    title = url.split('/')[-1].split('.')[0]
+    title = url.replace("/","").replace(".","")
     print("Article: {}".format(title))
     try:
         r = requests.get(url)
@@ -24,7 +24,7 @@ for url in urls:
             text.append(p.get_text())
 
 
-        with open('articles/{}_{}.txt'.format(title,i), 'w') as f:
+        with open('new_articles/{}.txt'.format(title), 'w') as f:
             text = '\n'.join(text)
             f.write(text)
 
