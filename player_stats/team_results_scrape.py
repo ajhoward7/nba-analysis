@@ -24,6 +24,7 @@ try:
 
     tables = soup.find_all("table")
 
+
     # REGULAR SEASON:
     table = tables[0]
     headings = [th.get_text() for th in table.find("tr").find_all("th")]
@@ -51,9 +52,11 @@ try:
 
     df.to_csv("player_stats/{}_results.csv".format(team_name),index=False)
 
+    reg_wins = list(df.net_wins)[-1]
+
 
     # POSTSEASON:
-    if len(tables) > 0:
+    if len(tables) > 1:
         table = tables[1]
 
         headings = [th.get_text() for th in table.find("tr").find_all("th")]
@@ -71,7 +74,7 @@ try:
 
         df.Date = pd.to_datetime(df.Date)
 
-        df['net_wins'] = df.W.astype('int') - df.L.astype('int')
+        df['net_wins'] = reg_wins + df.W.astype('int') - df.L.astype('int')
         df['win_flag'] = (df.Tm.astype('int') - df.Opp.astype('int')) > 0
         df.win_flag = df['win_flag'].apply(lambda x: 'W' if x==True else 'L')
 
