@@ -1,0 +1,31 @@
+Name,Wins,Playoffs,Conference,New York Team,City,noun_occurrences,raw_occurrences,% difference
+Lakers,35,0,W,0,Los Angeles,103,103,0.0
+Cavaliers,50,4,E,0,Cleveland,370,369,-0.27100271002710025
+Warriors,58,5,W,0,Golden State,521,525,0.7619047619047619
+Celtics,55,3,E,0,Boston,302,297,-1.6835016835016834
+Spurs,47,1,W,0,San Antonio,108,109,0.9174311926605505
+76ers,52,2,E,0,Philadelphia,186,195,4.615384615384616
+Knicks,29,0,E,1,New York,590,591,0.1692047377326565
+Bulls,27,0,E,0,Chicago,28,28,0.0
+Rockets,65,3,W,0,Houston,296,296,0.0
+Raptors,59,2,E,0,Toronto,153,150,-2.0
+Mavericks,24,0,W,0,Dallas,60,60,0.0
+Thunder,48,1,W,0,Oklahoma City,67,77,12.987012987012985
+Suns,21,0,W,0,Phoenix,41,42,2.380952380952381
+Heat,44,1,E,0,Miami,75,71,-5.633802816901409
+Hawks,24,0,E,0,Atlanta,32,32,0.0
+Timberwolves,47,1,W,0,Minnesota,46,52,11.538461538461538
+Hornets,36,0,E,0,Charlotte,31,32,3.125
+Clippers,42,0,W,0,Los Angeles,99,100,1.0
+Pistons,39,0,E,0,Detroit,37,37,0.0
+Pacers,48,1,E,0,Indiana,91,90,-1.1111111111111112
+Blazers,49,1,W,0,Portland,44,42,-4.761904761904762
+Bucks,44,1,E,0,Milwaukee,62,58,-6.896551724137931
+Wizards,43,0,E,0,Washington,61,58,-5.172413793103448
+Magic,25,0,E,0,Orlando,45,42,-7.142857142857142
+Nets,28,0,E,1,Brooklyn,146,150,2.666666666666667
+Grizzlies,22,0,E,0,Memphis,29,29,0.0
+Kings,27,0,W,0,Sacramento,52,52,0.0
+Nuggets,46,0,W,0,Denver,38,38,0.0
+Jazz,48,2,W,0,Utah,65,51,-27.450980392156865
+Pelicans,48,2,W,0,New Orleans,106,104,-1.9230769230769231
