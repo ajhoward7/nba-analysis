@@ -27,7 +27,7 @@ def load_articles(articles_list):
     title_text_dict = dict()
 
     for article in file_title:
-        with open(f'nyt_scrape/new_articles/{article}.txt') as f:
+        with open(f'nyt_scrape/articles/{article}.txt') as f:
             title_text_dict[article] = f.read().replace('’', '').replace('”', '').replace('“', '').replace('—',
                                                                                                            '').split(
                 '\n')
