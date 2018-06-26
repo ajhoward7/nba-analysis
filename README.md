@@ -23,7 +23,7 @@ An adapted version of [Brian Spiering's Environment](https://github.com/brianspi
 
 All of the applicable data for this project was scraped from online sources.
 
-**Media articles:  **
+**Media articles:**
   
 - ESPN: fully functioning code is available in the `/espn_scrape/` directory of this project to scrape ESPN's NBA articles. Unfortunately the ESPN server for this portion of the website is currently down, so we are unable to use these results.  
   
@@ -33,7 +33,7 @@ All of the applicable data for this project was scraped from online sources.
   
   
   
-**NBA Stats:  **
+**NBA Stats:**
   
 All scraped stats data is listed in `/player_stats/` directory.  
   
